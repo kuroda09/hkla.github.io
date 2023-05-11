@@ -15,7 +15,10 @@ class Dispatch {
         if (isset($url_dump[1]) && $url_dump[1] != '') {
             switch ($url_dump[1]) {
                 case 'admin':
-                    // new Dashboard();
+                    new \Controller\Admin\DashboardController();
+                    break;
+                case 'login':
+                    new \Controller\Admin\AuthenticationController();
                     break;
                 case 'user':
                     $user = new \App\Api\User();

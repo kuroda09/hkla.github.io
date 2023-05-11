@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <title>{% block styles %}{% endblock %}</title>
+    {% for item in css %}
+        <link rel="stylesheet" href="{{ item }}?v={{ "now"|date('His') }}">
+    {% endfor %}
+</head>
+<body id="" class="container-fluid">
+    <header id="header">
+        <nav class="navbar nav" id="menu-navigation">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Users</a>
+                    <div class="nav-menu-submenu-wrap">
+                        <div class="nav-heading">
+                            <ul class="nav-menu-submenu">
+                                <li><a href="#">User List</a></li>
+                                <li><a href="#">User Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {% block body %}{% endblock %}
+    
+</body>
+</html>

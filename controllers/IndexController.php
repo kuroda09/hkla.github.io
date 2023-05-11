@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-class IndexController extends Controller{
+class IndexController extends CoreController{
     public function __construct(){
         parent::__construct();
         $this->init();
