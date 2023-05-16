@@ -1,0 +1,47 @@
+/* set globals */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    color: #000;
+    text-decoration: none;
+    font-family: Ubuntu;
+}
+.contain-wide {
+    width: 100%;
+}
+.container {
+    display: flex;
+}
+
+div#page {
+    display: flex;
+}
+/* set globals end */
+/* header */
+header#header {
+    width: 200px;
+    height: 100vh;
+    position: sticky;
+    background: #333;
+    display: flex;
+    align-items: center;
+}
+    header#header div#header-menu {
+        width: 100%;
+    }
+    header#header li a {
+        display: block;
+        color: #fff;
+        padding: 10px 10px 10px 30px;
+        font-size: 20px;
+        transition: .2s;
+    }
+    header#header li a:hover,
+    header#header li.active a {
+        background: #fff;
+        color: #333;
+        transition: .3s;
+    }
+/* header end */

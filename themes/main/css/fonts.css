@@ -1,0 +1,17 @@
+/* set fonts */
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family: Ubuntu-medium;
+    src: url(../fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: Ubuntu-bold;
+    src: url(../fonts/Ubuntu-Bold.ttf);
+}
+
+* {
+    font-family: Ubuntu;
+}

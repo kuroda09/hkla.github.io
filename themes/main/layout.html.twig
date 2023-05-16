@@ -4,8 +4,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="themes/main/css/fonts.css" type="text/css" media="all" >
+    <link rel="stylesheet" href="themes/main/css/{{ page_name }}.css" type="text/css" media="all" >
 </head>
-<body>
+
+<body class="{% block classes %}{% endblock %}" id="{{ page_name }}">
+    <div id="page">
+        {# header #}
+        <header id="header" class="content-wrap">
+            <div class="container contain-wide">
+                <div id="header-menu">
+                    <ul class="menu display-flex"> 
+                        <li class="menu-item {% if page_name == 'index' %}active{% endif %}"><a href="/">Home</a></li>
+                        <li class="menu-item {% if page_name == 'about' %}active{% endif %}"><a href="#">About me</a></li>
+                        <li class="menu-item {% if page_name == 'portfolio' %}active{% endif %}"><a href="#">Portfolio</a></li>
+                        <li class="menu-item {% if page_name == 'contact' %}active{% endif %}"><a href="#">Contact me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        {# header end #}
+    </div>
 
     {% block body %}{% endblock %}
     

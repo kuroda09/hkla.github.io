@@ -1,0 +1,29 @@
+/* globals */
+* {
+    margin: 0;
+    padding: 0;
+}
+body#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #fbfbfb;
+    padding: 30px;
+    background: #efefef;
+}
+form#loginForm input {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    border: 1px solid #dedede;
+}
+form#loginForm input[type="submit"] {
+    background: var(--bs-green);
+    font-weight: 500;
+}

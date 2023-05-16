@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <title>{% block styles %}{% endblock %}</title>
+    <link rel="stylesheet" href="themes/main/css/fonts.css" type="text/css" media="all" >
     {% for item in css %}
         <link rel="stylesheet" href="{{ item }}?v={{ "now"|date('His') }}">
     {% endfor %}

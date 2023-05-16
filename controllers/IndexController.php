@@ -9,7 +9,10 @@ class IndexController extends CoreController{
     }
 
     public function init($template = '', $parameters = []){
-        parent::init('index.html.twig',['name' => 'John Doe', 
-        'occupation' => 'gardener']);
+        parent::init('index.html.twig',
+            [
+                'page_name' => 'index', 
+            ]
+        );
     }
 }
